@@ -51,3 +51,8 @@ appLB2.get('/loadBalance/data', (req, res) => {
   return res.status(404).end();
 });
 http.createServer(appLB2).listen(8082);
+
+if(process.argv[2]) {
+  const open = require('open');
+  open('http://localhost:8080/' + process.argv[2]);
+}

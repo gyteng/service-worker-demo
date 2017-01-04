@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gyteng/service-worker-demo#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "open": "0.0.5"
   }
 }
