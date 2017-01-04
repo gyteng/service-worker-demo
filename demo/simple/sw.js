@@ -1,11 +1,11 @@
-var ONLINE_CACHE_NAME = '2017-01-04 12:05';
+var ONLINE_CACHE_NAME = '2017-01-04 14:46';
 var onlineCacheUrl = [
   '/simple',
   '/simple/',
   '/simple/angular.min.js',
 ];
 
-this.addEventListener('activate', function(event) {
+self.addEventListener('activate', function(event) {
   var cacheWhitelist = [ONLINE_CACHE_NAME];
   event.waitUntil(
     caches.keys().then(function(keyList) {
