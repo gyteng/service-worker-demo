@@ -1,7 +1,8 @@
-var ONLINE_CACHE_NAME = '2017-01-04 11:05';
+var ONLINE_CACHE_NAME = '2017-01-04 12:05';
 var onlineCacheUrl = [
   '/simple',
-  '/libs/angular.min.js',
+  '/simple/',
+  '/simple/angular.min.js',
 ];
 
 this.addEventListener('activate', function(event) {
@@ -32,10 +33,10 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
     .then(function(response) {
-        if (response) {
-            return response;
-        }
-        return fetch(event.request);
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
     })
   );
 });

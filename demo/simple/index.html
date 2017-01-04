@@ -4,14 +4,14 @@
     <title>simple</title>
 </head>
 <body ng-app="app" ng-controller="MainCtrl">
-    <script src="/libs/angular.min.js"></script>
+    <script src="/simple/angular.min.js"></script>
     <script>
       var app = angular.module('app', []);
       app.controller('MainCtrl', function($scope, $http) {
         $scope.isSupportServiceWorker = false;
         $scope.isOnline = false;
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw-simple.js').then(function(registration) {
+          navigator.serviceWorker.register('/simple/sw-simple.js').then(function(registration) {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
             $scope.$apply(function() {
               $scope.isSupportServiceWorker = true;
